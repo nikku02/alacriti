@@ -1,7 +1,7 @@
 # alacriti
 
 # Description
-This project has been designed using micro-services architecture. It contains 2 spring boot application. The database is a relationed database (Postgresql). It utilizes db merchant which has 2 tables merchant and payment. The spring boot application utilizes the following dependencies spring-boot-starter-data-jpa, spring-boot-starter-web, spring-boot-devtools, postgresql and lombok.
+This project has been designed using micro-services architecture. It contains 2 spring boot application. The database is a relationed database (Postgresql). It utilizes db merchant which has 2 tables merchant and payment. The spring boot application utilizes the following dependencies java version 11, spring-boot-starter-data-jpa, spring-boot-starter-web, spring-boot-devtools, postgresql and lombok.
 
 1. Merchant Application
 2. Payment Application
