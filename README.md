@@ -42,3 +42,40 @@ The above endpoint, does a restTemplate call internally to Payment microservice 
 2.  GET "api/payment_status/{paymentId}" with paymentId to be checked.
 
 The above endpoint, does a restTemplate call internally to Payment microservice POST "api/payment/{paymentId}" which fetches the details from payment table under merchant db and returns a string confirmation message.
+
+# Payment Application
+It has 2 RestControllers.
+
+## Merchant Controller
+
+It has 1 endpoint. POST "api/register" with below request body.
+
+{
+    "merchantId": "8282",
+    "name": "Merchant Name",
+    "email": "merchant@example.com",
+    "businessType": "Online Retail",
+    "address": "123 Main St, City",
+    "phone": "123-456-7890"
+}
+
+The above endpoint, saves the details in merchant table under merchant db by doing a repo call and returns a string confirmation message.
+
+## Payment Controller
+
+It has 2 endpoints.
+
+1. POST "api/payment" with below request body.
+
+{
+    "merchantId": "8282",
+    "amount": 50.00,
+    "currency": "USD",
+    "orderId": "order123"
+}
+
+The above endpoint, saves the details in payment table under merchant db by doing a repo call and returns a string confirmation message.
+
+2.  GET "api/payment/{paymentId}" with paymentId to be checked.
+
+The above endpoint, fetches the details from payment table under merchant db by doing a repo call findById() and returns a string confirmation message.
