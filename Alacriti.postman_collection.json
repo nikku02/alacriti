@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "93088aba-94b3-4b8b-8192-a45661b31e99",
+		"name": "Alacriti",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15224884"
+	},
+	"item": [
+		{
+			"name": "Register Merchant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"merchantId\": \"8282\",\n    \"name\": \"Merchant Name\",\n    \"email\": \"merchant@example.com\",\n    \"businessType\": \"Online Retail\",\n    \"address\": \"123 Main St, City\",\n    \"phone\": \"123-456-7890\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/register_merchant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"register_merchant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"merchantId\": \"8282\",\n    \"amount\": 50.00,\n    \"currency\": \"USD\",\n    \"orderId\": \"order123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Payment Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/payment_status/order1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"payment_status",
+						"order1234"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
